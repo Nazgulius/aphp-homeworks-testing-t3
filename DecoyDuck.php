@@ -1,11 +1,15 @@
 <?php
 
-include "./Duck.php";
-
-class DecoyDuck extends Duck
+class DecoyDuck extends Duck implements ActionDuck
 {
-    function display()
-    {
+  private $strategy;
 
-    }
+  public function __construct(DecoyDuckStrategy $strategy) {
+    $this->strategy = $strategy;
+  }
+
+  public function startAction()
+  {
+    $this->strategy->display();
+  }
 }

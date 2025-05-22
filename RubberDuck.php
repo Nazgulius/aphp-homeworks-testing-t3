@@ -1,16 +1,16 @@
 <?php
 
-include "./Duck.php";
-
-class RubberDuck extends Duck
+class RubberDuck extends Duck implements ActionDuck
 {
-    function quack()
-    {
+  private $strategy;
 
-    } 
-    
-    function display()
-    {
+  public function __construct(RubberDuckStrategy $strategy) {
+    $this->strategy = $strategy;
+  }
 
-    }
+  public function startAction()
+  {
+    $this->strategy->display();
+    $this->strategy->quack();
+  }
 }

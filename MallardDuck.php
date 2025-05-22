@@ -1,21 +1,17 @@
 <?php
 
-include "./Duck.php";
-
-class MallardDuck extends Duck
+class MallardDuck extends Duck implements ActionDuck
 {
-    function fly()
-    {
+  private $strategy;
 
-    } 
+  public function __construct(MallardDuckStrategy $strategy) {
+    $this->strategy = $strategy;
+  }
 
-    function quack()
-    {
-
-    }
-
-    function display()
-    {
-
-    }
+  public function startAction()
+  {
+    $this->strategy->display();
+    $this->strategy->fly();
+    $this->strategy->quack();
+  }
 }

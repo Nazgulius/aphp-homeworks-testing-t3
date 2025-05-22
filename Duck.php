@@ -1,9 +1,9 @@
 <?php
 
-class Duck
+abstract class Duck
 {
-    function swim(): void
-    {
-        echo "Утка плавает" . PHP_EOL;
-    }
+  public function swim(): void
+  {
+      echo "Утка плавает" . PHP_EOL;
+  }
 }

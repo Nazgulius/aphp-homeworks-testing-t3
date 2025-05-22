@@ -1,20 +1,18 @@
 <?php
-// У нас есть несколько уток:
 
-// обычная утка (MallardDuck),
-// красноголовая утка (RedheadDuck),
-// резиновая уточка (RubberDuck),
-// деревянная утка (DecoyDuck).
+spl_autoload_register(function ($class_name) {
+  include $class_name . '.php';
+});
 
-// Но есть небольшая проблема:
-
-// обычная утка и красноголовая утка летают, крякают и отображаются (методы fly(), quack() и display());
-// резиновая уточка отображается и крякает (quack() и display());
-// деревянная утка просто существует (display()).
-// И все уточки умеют плавать (swim()).
-
-include "./Duck.php";
-include "./DecoyDuck.php";
-
-$duck = new Duck();
-$duck->swim(); 
+$dd = new DecoyDuck(new DecoyDuckStrategy());
+$dd->swim(); 
+$dd->startAction();
+$dm = new MallardDuck(strategy: new MallardDuckStrategy());
+$dm->swim(); 
+$dm->startAction();
+$dr = new RedheadDuck(new RedheadDuckStrategy());
+$dr->swim(); 
+$dr->startAction();
+$dr2 = new RubberDuck(new RubberDuckStrategy());
+$dr2->swim(); 
+$dr2->startAction();
