@@ -1,8 +1,8 @@
 <?php
 
-include Duck();
+include "./Duck.php";
 
 class RedheadDuck extends DecoyDuck
 {
-    
+
 }

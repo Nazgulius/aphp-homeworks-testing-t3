@@ -1,6 +1,6 @@
 <?php
 
-include Duck();
+include "./Duck.php";
 
 class RubberDuck extends Duck
 {

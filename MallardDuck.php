@@ -1,6 +1,6 @@
 <?php
 
-include Duck();
+include "./Duck.php";
 
 class MallardDuck extends Duck
 {
@@ -16,6 +16,6 @@ class MallardDuck extends Duck
 
     function display()
     {
-        
+
     }
 }

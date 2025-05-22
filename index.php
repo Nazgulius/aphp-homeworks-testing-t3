@@ -13,3 +13,8 @@
 // деревянная утка просто существует (display()).
 // И все уточки умеют плавать (swim()).
 
+include "./Duck.php";
+include "./DecoyDuck.php";
+
+$duck = new Duck();
+$duck->swim(); 

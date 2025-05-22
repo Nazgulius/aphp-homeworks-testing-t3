@@ -1,11 +1,11 @@
 <?php
 
-include Duck();
+include "./Duck.php";
 
 class DecoyDuck extends Duck
 {
     function display()
     {
-        
+
     }
 }
